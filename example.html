@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+            <style>
+                .parallax {
+                    perspective: 1px;
+                    height: 100vh;
+                    overflow-x: auto;
+                    overflow-y: auto;
+                    font-size: 200%;
+                }
+            .parallax__layer {
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                margin: 0 0 0 -602px;
+                width: 1205px;
+                height: 1210px;
+            }
+            .parallax__layer--base {
+                transform: translateZ(0);
+            }
+            .parallax__layer--back {
+                background:linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("snow1.jpg");
+                background-size:100% 100%;
+                transform: translateZ(-1px) scale(2);
+            }
+            .title {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+            </style>
+    </head>
+    <body>
+        <div class="parallax">
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">This is the background</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">This is the foreground</div>
+            </div>
+        </div>
+    </body>
+</html>
