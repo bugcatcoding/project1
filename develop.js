@@ -1,3 +1,4 @@
 console.log("Joey");
-console.log("wowo")
+console.log("wowo");
 console.log("Joey");
+console.log("HI")
